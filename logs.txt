@@ -1,0 +1,35 @@
+commit 92211d6a2108d4df5f84457f93dc1787156147a5 (HEAD -> master, origin/master, origin/bug2, bug2)
+Author: Mario SI <mario.mitevski@students.finki.ukim.mk>
+Date:   Wed Mar 20 14:44:29 2024 +0100
+
+    Call method makeBigStringFrom in main class
+
+commit b8999e2385dc9a0eee064f744b600265c042001f
+Author: Mario SI <mario.mitevski@students.finki.ukim.mk>
+Date:   Wed Mar 20 14:31:44 2024 +0100
+
+    Fix wrong condition in makeBigStringFrom
+
+commit 55e0e38d76c910138c4da987922e5fcfc53c597f (origin/bug1, bug1)
+Author: Mario SI <mario.mitevski@students.finki.ukim.mk>
+Date:   Wed Mar 20 14:41:44 2024 +0100
+
+    Call method filterOddLengthStrings in main class
+
+commit 642c3b733a97fe280f60a6957e3da3677a49ea14
+Author: Mario SI <mario.mitevski@students.finki.ukim.mk>
+Date:   Wed Mar 20 14:15:52 2024 +0100
+
+    Fix wrong condition in filterOddLengthStrings
+
+commit 35acca1936b5e8ff470fdd84efc615e60856a89f
+Author: Mario SI <mario.mitevski@students.finki.ukim.mk>
+Date:   Wed Mar 20 13:30:34 2024 +0100
+
+    Add starter code
+
+commit ad4f3424d013c1635c76f14acc47117077bb4a25
+Author: Mario SI <mario.mitevski@students.finki.ukim.mk>
+Date:   Wed Mar 20 13:11:30 2024 +0100
+
+    Initial commit

@@ -1,0 +1,126 @@
+1. Креиран ( https://github.com/mmitevski0 )
+
+2. Името е променето од main во master
+
+3. Креиран е приватен (remote) репозиториум на Github ( https://github.com/mmitevski0/SI_2024_lab1_213222 )
+
+4. Иницијализација на Git се врши со командата: git init
+
+5. Командата за поврзување на локалниот со оддалечениот репозиториум е: 
+
+	git remote add origin https://github.com/mmitevski0/SI_2024_lab1_213222.git 
+
+6. Креирањето на README.md датотека на Linux оперативен систем се користи командата: nano README.md
+
+	Но, бидејќи јас користам Windows оперативен систем ја употребувам командата: notepad README.md
+
+	Сега датотеката се наоѓа во фазата untracked.
+
+	Со git add README.md преминува од "untracked" во "Changes to be committed" односно "staged"
+
+	Commit правиме со командата: git commit -m "Initial commit"
+
+7. Откако ќе завршиме со додавање на фајловите во локалниот директориум тие се наоѓаат во "untracked" фаза
+
+	Со командите git add SILab1Main.java
+	git add SILab1_1.java
+	git add SILab1_2.java
+
+	Фајловите преминуваат од "untracked" во "Changes to be committed" односно "staged"
+
+	Commit правиме со командата: git commit -m "Add starter code"
+
+8. Синхронизација на сите гранки со оддалечениот репозиториум се врши со командата: git push --all origin
+
+9. Гранките ги отвараме со следните команди:
+	git branch bug1
+	git branch bug2 
+
+10. Се префрламе на гранката bug1: git checkout bug1
+
+11. За да ја поправиме грешката ги користиме следните команди: 
+	
+	За отварање на фајлот и поправање на грешката (од el.length() % 2 == 0 во el.length() % 2 != 0) :
+		nano SILab1_1.java или во мојот случај notepad SILab1_1.java
+	
+	Правиме commit со командата:
+		git commit -am "Fix wrong condition in filterOddLengthStrings"
+		каде што -a значи да се стават во фаза "staged" сите променети (modified) фајлови
+
+12. Се префрламе на гранката bug2: git checkout bug2 
+
+13. За отварање на фајлот и поправање на грешката (од el.length() < minLength во el.length() >= minLength) :
+		nano SILab1_2.java или во мојот случај notepad SILab1_2.java
+	
+	Правиме commit со командата:
+		git commit -am "Fix wrong condition in makeBigStringFrom"
+		каде што -a значи да се стават во фаза "staged" сите променети (modified) фајлови
+
+14. Се префрламе на гранката bug1: git checkout bug1
+
+15. За отварање на фајлот и додавање на повикот:
+	nano SILab1Main.java или во мојот случај notepad SILab1Main.java
+
+	Правиме commit со командата:
+		git commit -am "Call method filterOddLengthStrings in main class"
+		каде што -a значи да се стават во фаза "staged" сите променети (modified) фајлови
+
+16. Се префрламе на гранката bug2: git checkout bug2
+
+17. За отварање на фајлот и додавање на повикот:
+	nano SILab1Main.java или во мојот случај notepad SILab1Main.java
+
+	Правиме commit со командата:
+		git commit -am "Call method makeBigStringFrom in main class"
+		каде што -a значи да се стават во фаза "staged" сите променети (modified) фајлови
+
+18. Синхронизација на сите гранки со оддалечениот репозиториум се врши со командата: git push --all origin
+
+19. Се префрламе на гранката master: git checkout master
+
+20. За да ја споиме гранката bug1 кон гранката master:
+	git merge bug1
+	
+	Употребено е Fast-forward и не се најдени конфликти
+
+21. Синхронизација на сите гранки: git push --all origin 
+
+22. Се префрламе на гранката bug2: git checkout bug2
+
+23. Правење rebase спрема гранката  master:
+	git rebase master
+
+	Се јавува конфликт во SILab1Main.java кој го решавам така што ги чувам и двата повика
+	
+24. Се префрламе на гранката master: git checkout master
+
+25. За да ја споиме гранката bug2 кон гранката master:
+	git merge bug2
+	
+	Употребено е Fast-forward и не се најдени конфликти
+
+26. Синхронизација на сите гранки: git push --all origin
+
+27. Употребуваме --force поради гранката bug2:
+	git push --force --all origin
+
+28. Додавање на logs.txt:
+
+	Го креираме logs.txt и ја додаваме содржината од git log:
+		nano logs.txt или во мојот случај notepad logs.txt
+	
+	Датотеката ја преместуваме од "untracked" во "Changes to be committed" односно "staged":
+		git add logs.txt
+
+     Додавање на 213222.txt:
+
+	 Го креираме 213222.txt и ја внесуваме документацијата:
+		nano 213222.txt или во мојот случај notepad 213222.txt
+	
+	 Датотеката ја преместуваме од "untracked" во "Changes to be committed" односно "staged":
+		git add 213222.txt
+
+      Го правиме последниот commit:
+         git commit -m "Final commit"
+
+29. Синхронизација на сите гранки со оддалечениот репозиториум се врши со командата: git push --all origin
